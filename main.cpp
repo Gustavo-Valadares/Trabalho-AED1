@@ -34,19 +34,12 @@ int main(){
 
 //é preciso fazer a lista de eventos antes de fazer a de ingressos
     //verificar funcionamento de lista de eventos
-    //1. adicionar, printar, excluir, printar, adicionar, printar
-    //2. adicionar 1, printar, adicionar 2, printar, excluir 1, printar
-    //3. adicionar 1, printar, adicionar 2, printar, excluir 2, printar
+    //1. adicionar, printar, excluir, printar, adicionar, printar (funcionando)
+    //2. adicionar 1, printar, adicionar 2, printar, excluir 1, printar (duncuinando)
+    //3. adicionar 1, printar, adicionar 2, printar, excluir 2, printar (funcionando)
 
 
 //por enquanto é melhor fazer uma limitação de 5 eventos e 5 ingressos, depois otimizo
-    //por enquanto cada usuário só poderá ter um ingresso de cada evento, mas pretendo fazer para que tenha mais de um
-
-
-    // void show_all events
-    // void remove event
-        // void delete event
-
        
 
     // bool add_ticket

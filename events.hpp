@@ -35,7 +35,7 @@ void insert_event(Event *event, Event *ne);
 
 bool show_user_events(Event *events);
 
-void register_events(Event_List *events, int e_quant);
+void register_events(Event_List *events);
 
 void remove_user_event(Event_List *e_List, string del_name);
 

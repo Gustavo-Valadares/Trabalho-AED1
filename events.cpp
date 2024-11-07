@@ -57,7 +57,7 @@ void insert_event(Event *events, Event *ne){
 
 
 
-void register_events(Event_List *e_List, int e_quant){
+void register_events(Event_List *e_List){
     
     Event *ne = NULL;
     string straux;
@@ -68,15 +68,9 @@ void register_events(Event_List *e_List, int e_quant){
     
     char check = 'n';
 
-    if(e_quant == 5){
-        cout << "Você só pode cadastrar 5 eventos por vez!!\n\n";
-        return ;
-    }
-
 
     while(check != 'y'){
         
-
         cout << "Nome do Evento: ";
         cin.ignore();
         getline(cin, straux);

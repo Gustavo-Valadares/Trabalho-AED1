@@ -106,11 +106,16 @@ void user_menu_adm(StartUsers *List, User *u){
 
 
             case 2:
-                //cadastrar evento
 
-                register_events(u->e_List, u->e_List->e_quant); //acho que vai ser necessário usar ponteiro pra ponteiro
-                u->e_List->e_quant++;
-                    //se o vetor de eventos estiver cheio, avisar e não entrar
+                if(u->e_List->e_quant > 5){
+                    cout << "Você só pode cadastrar 5 eventos por vez!!\n\n";
+
+                } else {
+                    register_events(u->e_List);
+                    u->e_List->e_quant++;
+
+                }
+
             break;
 
 
@@ -128,18 +133,16 @@ void user_menu_adm(StartUsers *List, User *u){
 
                     cout << "\n";
                     cout << "Digite o nome do evento que deseja excluir: ";
-                    //getchar();
                     getline(cin, del_ename);
                     cout << endl;
 
-                    cout << "Erro1\n";
                     remove_user_event(u->e_List, del_ename);
                     u->e_List->e_quant--;
 
                 } 
 
                 else cout << "Senha Incorreta\n";
-                //excluir evento do vetor
+                
 
             break;
 
@@ -152,11 +155,10 @@ void user_menu_adm(StartUsers *List, User *u){
                 getline(cin, password_check);
 
                 if(password_check == u->password){
-                    //remove_user(&(List->head), u, aux);
                     remove_user(List, u->CPF);
                     List->Uquant--;
 
-                    cout << "Conta Excluida :( \n";
+                    cout << "Conta Excluida\n";
                     return ;
                 }
 
@@ -174,6 +176,7 @@ void user_menu_adm(StartUsers *List, User *u){
     }
 }
 
+
 void user_menu(StartUsers *List, User *u){ //não adminstrador
 
     string find_tname;
@@ -182,13 +185,10 @@ void user_menu(StartUsers *List, User *u){ //não adminstrador
     
     cout << "Bem Vindo " << u->name << "!\n";
 
-    //cout << "Endereço Fuser: " << List << endl;
     int command = 0;
 
     
-    while(1){ // testar while(command != 6)
-
-        if(command == 6) break;
+     while(command != 6){
 
         cout << endl;
         cout << "=====================================================================\n";
@@ -214,9 +214,6 @@ void user_menu(StartUsers *List, User *u){ //não adminstrador
             case 1:
                 //Olhar eventos (criar menu) 
                 show_all_events(List);
-
-                
-
                 
                 //mandar o UserList
                     //entrar na memoria dos usuário
