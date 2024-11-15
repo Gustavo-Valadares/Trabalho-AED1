@@ -1,2 +1,3 @@
-# Trabalho-AED1
-Trabalho de Algoritmo e Estruturas de Dados que simulla um serviço de compra e venda de ingressos para eventos diversos
+O projeto ainda não está pronto
+
+Para rodar basta digitar no terminal: source run.sh
